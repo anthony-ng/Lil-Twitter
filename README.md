@@ -5,6 +5,12 @@
 * Build a fully functional web application from scratch
 * Use agile development techniques
 
+## Summary
+
+Good news: you're a web developer now. And here's your chance to prove it.
+We're going to be building a fully functional web application from scratch. And
+we're going to do it in teams, using the Agile development process.
+
 ## Releases
 
 ### Release 1: Deciding on your project and MVP

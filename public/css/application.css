@@ -1,0 +1,42 @@
+/*.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+*/
+
+body {
+  background: beige;
+}
+
+#splash {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form  {
+  border: 1px solid black;
+  height: 200px;
+  width: 600px;
+  margin: 0 auto;
+  background: white;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 70px;
+  margin: 15px 20px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 15px 20px;
+  font-size: 1em;
+  background: steelblue;
+  color: white;
+}
+

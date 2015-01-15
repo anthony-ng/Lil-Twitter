@@ -3,12 +3,23 @@
 
 ## [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
 
-### Summary
+## Summary
 
 I am building my own version
 of Twitter called Lil Twitter.
 
-**Lil' Twitter**
+## Release
+### Release 0
+
+* Added RESTful routes
+* Added Active Record association & validation
+
+### Upcoming
+
+* Add log in/out feature
+* Add post status feature
+
+**Sample User Stories**
 * A user can log in
 * A user can retweet others' status updates
 * A user can see others' profile pages with all their updates

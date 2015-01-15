@@ -19,7 +19,8 @@ of Twitter called Lil Twitter.
 * Add log in/out feature
 * Add post status feature
 
-**Sample User Stories**
+## Sample User Stories
+
 * A user can log in
 * A user can retweet others' status updates
 * A user can see others' profile pages with all their updates

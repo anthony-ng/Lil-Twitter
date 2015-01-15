@@ -1,7 +1,12 @@
 # Lil-Twitter
-### [Lil-Twitter](https://lil-twitter.herokuapp.com/)
+## [Lil-Twitter](https://lil-twitter.herokuapp.com/)
 
-### [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
+## [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
+
+### Summary
+
+I am building my own version
+of Twitter called Lil Twitter.
 
 **Lil' Twitter**
 * A user can log in

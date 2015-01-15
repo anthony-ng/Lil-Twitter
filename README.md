@@ -1,7 +1,7 @@
 # Lil-Twitter
 ### [Lil-Twitter](https://lil-twitter.herokuapp.com/)
 
-### Wireframes: https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5
+### [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
 
 **Lil' Twitter**
 > * A user can log in

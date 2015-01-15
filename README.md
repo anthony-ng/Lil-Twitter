@@ -9,7 +9,7 @@ I am building my own version
 of Twitter called Lil Twitter.
 
 ## Release
-### Release 0
+### Release 1.0
 
 * Added RESTful routes
 * Added Active Record association & validation

@@ -4,15 +4,16 @@ end
 
 ############## MVP #######################################
 get '/users/:user_id/tweets' do
-  erb :show
+  erb :'tweets/show'
 end
 
 get '/users/:user_id/tweets/new' do
-  erb :new
+  @user = User.find(params[:user_id])
+  erb :'tweets/new'
 end
 
 post '/users/:user_id/tweets' do
-  # Tweet.create(params[:tweet])
+  Tweet.create(params[:tweet].merge(user_id: params[:user_id]))
 end
 
 ##########################################################

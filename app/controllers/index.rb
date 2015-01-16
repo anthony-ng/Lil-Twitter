@@ -6,7 +6,6 @@ end
 post '/sessions' do
   @user = User.find_by(params[:username])
   if @user.password == params[:password]
-    p @user.id
     session[:user_id] = @user.id
   else
     redirect '/'
@@ -25,8 +24,6 @@ post '/users' do
   @user = User.new(username: params[:username])
   @user.password = params[:password]
   @user.save!
-  p @user.id
-
   session[:user_id] = @user.id
   redirect '/'
 end

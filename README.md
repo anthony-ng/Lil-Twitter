@@ -1,9 +1,29 @@
 # Lil-Twitter
-### [Lil-Twitter](https://lil-twitter.herokuapp.com/)
+## [Lil-Twitter](https://lil-twitter.herokuapp.com/)
 
-### [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
+## [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
 
-**Lil' Twitter**
+## Summary
+
+I am building my own version
+of Twitter called Lil Twitter.
+
+## Release
+### Release 1.0
+
+* Added RESTful routes
+* Added Active Record association & validation
+* Added Log in/ log out feature
+* Added tweet posting feature
+* Added User Authentication (BCrypt)
+
+### Upcoming
+
+* Better Home Page
+* better UI
+
+## Sample User Stories
+
 * A user can log in
 * A user can retweet others' status updates
 * A user can see others' profile pages with all their updates

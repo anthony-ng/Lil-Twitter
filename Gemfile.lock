@@ -80,12 +80,9 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
-<<<<<<< HEAD
+  bcrypt
   capybara
   factory_girl
-=======
-  bcrypt
->>>>>>> 888413c64d4a3e3d145f563ff5fb0e627f70d12d
   faker
   pg
   rack-test

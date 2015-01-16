@@ -10,12 +10,41 @@ th {
 */
 
 body {
-  background: beige;
+  background: url(../waterfall.jpg) no-repeat top center;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin: 30px 50px;
+  float: right;
+  font-size: 1.5em;
+}
+
+a:hover {
+  color: orange;
+}
+
+header {
+  background: rgba(30,30,30,0.9);
+  height: 75px;
+}
+
+nav {
 }
 
 #splash {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 200px auto;
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  padding: 30px;
 }
 
 form  {

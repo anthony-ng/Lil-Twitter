@@ -20,7 +20,7 @@ of Twitter called Lil Twitter.
 
 * Added User Authentication (BCrypt)
 * Added follower feature
-* 
+
 ### Release 1.2
 
 * Updated Home Page

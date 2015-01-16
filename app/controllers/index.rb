@@ -6,20 +6,30 @@ end
 post '/sessions' do
   @user = User.find_by(params[:username])
   if @user.password == params[:password]
-    give_token
+    session[:user_id] = @user.id
   else
-    redirect_to home_url
+    redirect '/'
   end
 end
 
 get '/users/new' do
-  #REGISTRATION FORM
+  erb :"users/new"
+end
+
+get '/login' do
+  erb :"users/login"
 end
 
 post '/users' do
-  @user = User.new(params[:username])
+  @user = User.new(username: params[:username])
   @user.password = params[:password]
   @user.save!
+  session[:user_id] = @user.id
+  redirect '/'
+end
+
+post '/logout' do
+  session[:user_id] = nil
 end
 
 get '/users/:user_id/tweets' do

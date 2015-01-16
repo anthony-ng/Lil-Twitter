@@ -7,14 +7,14 @@ get '/' do
 end
 
 ############## MVP #######################################
-post '/login' do
-# post '/sessions' do
+post '/sessions' do
   @user = User.find_by(username: params[:username])
   if @user.password == params[:password]
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}/tweets"
   else
-    redirect '/'
+    flash[:error] = "The username and password you entered did not match our records."
+    redirect '/login'
   end
 end
 
@@ -36,6 +36,7 @@ end
 
 post '/logout' do
   session[:user_id] = nil
+  redirect '/'
 end
 
 get '/users/:user_id/tweets' do

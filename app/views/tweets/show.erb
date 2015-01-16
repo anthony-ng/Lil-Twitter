@@ -33,3 +33,13 @@
     </ul>
   <% end %>
 </div>
+<div class="follower-list">
+  <% if @followers %>
+    <p>Followers</p>
+    <ul>
+      <% @followers.each do |follower| %>
+        <li><a href="/users/<%=follower.id%>/tweets"><%= follower.username %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

@@ -42,6 +42,7 @@ end
 get '/users/:user_id/tweets' do
   @user = User.find(params[:user_id])
   @leaders = @user.leaders
+  @followers = @user.followers
   erb :'tweets/show'
 end
 

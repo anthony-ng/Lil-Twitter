@@ -1,9 +1,14 @@
+after do
+  ActiveRecord::Base.clear_active_connections!
+end
+
 get '/' do
   erb :index
 end
 
 ############## MVP #######################################
-post '/sessions' do
+post '/login' do
+# post '/sessions' do
   @user = User.find_by(username: params[:username])
   if @user.password == params[:password]
     session[:user_id] = @user.id

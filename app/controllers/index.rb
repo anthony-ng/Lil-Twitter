@@ -42,8 +42,16 @@ get '/users/:user_id/tweets/new' do
 end
 
 post '/users/:user_id/tweets' do
-  Tweet.create(params[:tweet].merge(user_id: params[:user_id]))
+  # Tweet.create(params[:tweet].merge(user_id: params[:user_id]))
+  @user = User.find(params[:user_id])
+  @tweet = Tweet.create(params[:tweet])
+  @tweet.user = @user
+  @tweet.save
+  redirect "/users/#{@user.id}/tweets"
 end
+
+  #user = User.find(params[:user_id])
+  #Tweet.create(content: params[:tweet][:content], user_id: user.id)
 
 ##########################################################
 # get '/users/:user_id/tweets/:tweet_id' do

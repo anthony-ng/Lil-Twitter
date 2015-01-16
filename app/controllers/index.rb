@@ -3,6 +3,25 @@ get '/' do
 end
 
 ############## MVP #######################################
+post '/sessions' do
+  @user = User.find_by(params[:username])
+  if @user.password == params[:password]
+    give_token
+  else
+    redirect_to home_url
+  end
+end
+
+get '/users/new' do
+  #REGISTRATION FORM
+end
+
+post '/users' do
+  @user = User.new(params[:username])
+  @user.password = params[:password]
+  @user.save!
+end
+
 get '/users/:user_id/tweets' do
   erb :show
 end

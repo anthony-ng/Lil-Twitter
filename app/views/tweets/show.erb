@@ -10,32 +10,33 @@
       <input type="submit" value="Tweet!">
     </form>
   <% end %>
-</div>
-<div class="tweet-list">
-<!-- If user is signed in, display all their tweets -->
-  <% if @user.tweets %>
-    <% @user.tweets.each do |tweet| %>
-      <p><%= tweet.content  %></p>
+
+  <div class="tweet-list">
+  <!-- If user is signed in, display all their tweets -->
+    <% if @user.tweets %>
+      <% @user.tweets.each do |tweet| %>
+        <p><%= tweet.content  %></p>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
-<div class="leader-list">
-  <% if @leaders %>
-    <p>Leaders</p>
-    <ul>
-      <% @leaders.each do |leader| %>
-        <li><a href="/users/<%=leader.id%>/tweets"><%= leader.username %></a></li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
-<div class="follower-list">
-  <% if @followers %>
-    <p>Followers</p>
-    <ul>
-      <% @followers.each do |follower| %>
-        <li><a href="/users/<%=follower.id%>/tweets"><%= follower.username %></a></li>
-      <% end %>
-    </ul>
-  <% end %>
+  </div>
+  <div class="leader-list">
+    <% if @leaders %>
+      <h3>Leaders</h3>
+      <ul>
+        <% @leaders.each do |leader| %>
+          <li><a href="/users/<%=leader.id%>/tweets"><%= leader.username %></a></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <div class="follower-list">
+    <% if @followers %>
+      <h3>Followers</h3>
+      <ul>
+        <% @followers.each do |follower| %>
+          <li><a href="/users/<%=follower.id%>/tweets"><%= follower.username %></a></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </div>

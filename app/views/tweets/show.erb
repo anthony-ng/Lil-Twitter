@@ -14,7 +14,8 @@
       <input type="submit" value="Tweet!">
     </form>
   <% end %>
-  </div>
+</div>
+<div class="tweet-list">
 <!-- If user is signed in, display all their tweets -->
   <% if @user.tweets %>
     <% @user.tweets.each do |tweet| %>
@@ -22,4 +23,13 @@
     <% end %>
   <% end %>
 </div>
-
+<div class="leader-list">
+  <% if @leaders %>
+    <p>Leaders</p>
+    <ul>
+      <% @leaders.each do |leader| %>
+        <li><a href="/users/<%=leader.id%>/tweets"><%= leader.username %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

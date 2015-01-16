@@ -2,8 +2,10 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   has_many :tweets
-  has_many :followers, through: :followings
-  has_many :leaders, through: :followings
+  has_many :following_followers, class_name: 'Following', foreign_key: :leader_id
+  has_many :following_leaders, class_name: 'Following', foreign_key: :follower_id
+  has_many :followers, through: :following_followers, class_name: 'User'
+  has_many :leaders, through: :following_leaders, class_name: 'User'
 
   include BCrypt
   def password

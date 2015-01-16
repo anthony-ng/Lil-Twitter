@@ -7,7 +7,7 @@ post '/sessions' do
   @user = User.find_by(username: params[:username])
   if @user.password == params[:password]
     session[:user_id] = @user.id
-    redirect '/'
+    redirect "/users/#{@user.id}/tweets"
   else
     redirect '/'
   end
@@ -26,7 +26,7 @@ post '/users' do
   @user.password = params[:password]
   @user.save!
   session[:user_id] = @user.id
-  redirect '/'
+  redirect "/users/#{@user.id}/tweets"
 end
 
 post '/logout' do
@@ -56,6 +56,13 @@ end
   #Tweet.create(content: params[:tweet][:content], user_id: user.id)
 
 ##########################################################
+post '/users/:user_id/follow' do
+  unless current_user.id == params[:user_id]
+    Following.create(follower_id: current_user.id, leader_id: params[:user_id])
+  end
+  redirect "/users/#{params[:user_id]}/tweets"
+end
+
 # get '/users/:user_id/tweets/:tweet_id' do
 # end
 

@@ -35,7 +35,6 @@ end
 
 get '/users/:user_id/tweets' do
   @user = User.find(params[:user_id])
-  current_user
   erb :'tweets/show'
 end
 

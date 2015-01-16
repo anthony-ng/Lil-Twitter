@@ -1,18 +1,24 @@
+<form action="/logout" method="POST">
+  <input type="submit" value="logout">
+</form>
+
 <div class="container">
   <div id="user_profile">
   <h1>Lil-Twitter</h1>
 
-  <% if current_user == @user %>
-    <form action="/" method="POST">
+<!-- show "new tweet" form if it's the current user's page -->
+  <% if @current_user == @user %>
+    <form action="/users/<%= @user.id %>/tweets" method="POST">
       <input type="text" name="tweet[content]" placeholder="Tweet your thoughts here!">
       <input type="submit" value="Tweet!">
     </form>
   <% end %>
   </div>
-  <% @user.tweets.each do |tweet| %>
-    <p><%= tweet  %></p>
+<!-- If user is signed in, display all their tweets -->
+  <% if @user.tweets %>
+    <% @user.tweets.each do |tweet| %>
+      <p><%= tweet.content  %></p>
+    <% end %>
   <% end %>
 </div>
 
-<!-- If user is signed in, display all their tweets -->
-<!-- this current_user will be implemented in the future -->

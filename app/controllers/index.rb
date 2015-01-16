@@ -4,9 +4,10 @@ end
 
 ############## MVP #######################################
 post '/sessions' do
-  @user = User.find_by(params[:username])
+  @user = User.find_by(username: params[:username])
   if @user.password == params[:password]
     session[:user_id] = @user.id
+    redirect '/'
   else
     redirect '/'
   end
@@ -33,6 +34,8 @@ post '/logout' do
 end
 
 get '/users/:user_id/tweets' do
+  @user = User.find(params[:user_id])
+  current_user
   erb :'tweets/show'
 end
 

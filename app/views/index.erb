@@ -1,7 +1,21 @@
 <div class="container">
+  <% if current_user %>
+    <h1>Tweets From People You Follow:</h1>
+    <% current_user.leaders.each do |leader| %>
+      <% leader.tweets.each do |tweet| %>
+        <div>
+          <p><%= leader.username %></p>
+          <p><%= tweet.content %></p>
+          <p><%= tweet.created_at %></p>
+        </div>
+      <% end %>
+    <% end %>
 
-  <div id="splash">
-    <h1>Welcome to lil-Twitter</h1>
-    <h2>Connect with friends!</h2>
-  </div>
+  <% else %>
+    <div id="splash">
+      <h1>Welcome to lil-Twitter</h1>
+      <h2>Connect with friends!</h2>
+    </div>
+  <% end %>
+
 </div>

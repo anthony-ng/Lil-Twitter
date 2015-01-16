@@ -24,6 +24,7 @@
       <% if current_user %>
         <a href="/logout">Logout</a>
         <a href="/users/<%= current_user.id %>/tweets">Profile</a>
+        <a href="/">Home</a>
       <% else %>
         <a href="/users/new">Register</a>
         <a href="/login">Login</a>

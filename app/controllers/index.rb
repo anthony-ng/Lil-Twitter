@@ -34,7 +34,7 @@ post '/users' do
   redirect "/users/#{@user.id}/tweets"
 end
 
-post '/logout' do
+get '/logout' do
   session[:user_id] = nil
   redirect '/'
 end

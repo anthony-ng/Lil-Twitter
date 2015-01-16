@@ -19,6 +19,17 @@
   <title></title>
 </head>
 <body>
+  <header>
+    <nav>
+      <% if current_user %>
+        <a href="/logout">Logout</a>
+        <a href="/users/<%= current_user.id %>/tweets">Profile</a>
+      <% else %>
+        <a href="/users/new">Register</a>
+        <a href="/login">Login</a>
+      <% end %>
+    </nav>
+  </header>
   <%= yield %>
 </body>
 </html>

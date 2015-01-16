@@ -15,12 +15,19 @@ of Twitter called Lil Twitter.
 * Added Active Record association & validation
 * Added Log in/ log out feature
 * Added tweet posting feature
+
+### Release 1.1
+
 * Added User Authentication (BCrypt)
+* Added follower feature
+* 
+### Release 1.2
+
+* Updated Home Page
 
 ### Upcoming
 
-* Better Home Page
-* better UI
+* Better UI
 
 ## Sample User Stories
 

@@ -1,12 +1,11 @@
-# Lil-Twitter
-## [Lil-Twitter](https://lil-twitter.herokuapp.com/)
+# [Lil-Twitter](https://lil-twitter.herokuapp.com/)
 
 ## [Wireframes](https://moqups.com/danielkelley/WuE7mQUB/p:a045b14a5)
 
 ## Summary
 
-I am building my own version
-of Twitter called Lil Twitter.
+This is a tiny version
+of Twitter called Lil Twitter built by Sinatra.
 
 ## Release
 ### Release 1.0
@@ -24,6 +23,7 @@ of Twitter called Lil Twitter.
 ### Release 1.2
 
 * Updated Home Page
+* Added Error Handling feature
 
 ### Upcoming
 

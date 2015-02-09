@@ -48,3 +48,9 @@ of Twitter called Lil Twitter built by Sinatra.
 * A user has a profile page
 * Add your own user stories
 
+## Contributors
+
+* Anthony Ng 
+* Daniel Kelley 
+* Jeremy McIntyre 
+* Leonard Bui
